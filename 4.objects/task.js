@@ -1,4 +1,4 @@
-function Student(name, gender, age) {   
+function Student(name, gender, age) {
   this.name = name;
   this.gender = gender;
   this.age = age;
@@ -20,11 +20,11 @@ Student.prototype.addMark = function (mark) {
 }
 
 Student.prototype.addMarks = function (...rest) {
-	this.marks.push(rest);
+  this.marks.push(rest);
 }
 
 Student.prototype.getAverage = function(marks) {
-	let max = marks[0];
+  let max = marks[0];
   let min = marks[0];
   let sum = 0;
   let avg;
@@ -42,9 +42,9 @@ Student.prototype.getAverage = function(marks) {
 }
 
 Student.prototype.exclude = function (reason) {
-	delete Student.subject;
-	delete Student.marks;
-	Student.excluded = reason;
+  delete Student.subject;
+  delete Student.marks;
+  Student.excluded = reason;
 }
 
 // ваш код для остальных методов
