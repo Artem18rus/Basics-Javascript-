@@ -19,11 +19,11 @@ Student.prototype.addMark = function(mark) {
   }
 }
 
-Student.prototype.addMarks = function(...arr) {
+Student.prototype.addMarks = function(...spr) {
   if(this.marks === undefined){
-    this.marks = arr;
+    this.marks = spr;
   } else {
-    this.marks.push(arr);
+    this.marks.push(...spr);
   }
 }
 
