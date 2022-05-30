@@ -1,82 +1,89 @@
 //ЗАДАЧА 1:
 
 class PrintEditionItem {
-  const state = 100;
-  const type = null;
-    constructor(name, releaseDate, pagesCount) {
-      this.name = name;
-      this.releaseDate = releaseDate;
-      this.pagesCount = pagesCount;
+  constructor(name, releaseDate, pagesCount) {
+    this.state = 100;
+    this.type = null;
+    this.name = name;
+    this.releaseDate = releaseDate;
+    this.pagesCount = pagesCount;
     }
-    
-    fix() {
-      this.state = this.state * 1,5;
+
+  fix() {
+    this.state = this.state * 1.5;
+  }
+
+  set state(numb) {
+    if(numb < 0) {
+      this._state = 0;
+    } else if (numb > 100) {
+      this._state = 100;
+    } else {
+      this._state = numb;
     }
-    
-  this._state = state;
-    set state(numb) {
-      if(numb < 0) {
-        this.state = 0;
-      } else if (numb > 100) {
-        this.state = 100;
-      } else {
-        this.state = numb;
-      }
-    }
-    
-    get state() {
-      return this._state;
-    }
+  }
+
+  get state() {
+    return this._state;
+  }
 }
 
 class Magazine extends PrintEditionItem {
-  const state = 100;
-  const type = "magazine";
-    constructor(name, releaseDate, pagesCount) {
-      this.name = name;
-      this.releaseDate = releaseDate;
-      this.pagesCount = pagesCount;
-    }
+  constructor(name, releaseDate, pagesCount) {    
+    super();
+    this.state = 100;
+    this.type = "magazine";
+    this.name = name;
+    this.releaseDate = releaseDate;
+    this.pagesCount = pagesCount;
+  }
 }
 
 class Book extends PrintEditionItem {
-  const state = 100;
-  const type = "book";
-    constructor(name, releaseDate, pagesCount, author) {
-      this.name = name;
-      this.releaseDate = releaseDate;
-      this.pagesCount = pagesCount;
-    }
+  constructor(author, name, releaseDate, pagesCount) {
+    super();
+    this.state = 100;
+    this.type = "book";
+    this.name = name;
+    this.releaseDate = releaseDate;
+    this.pagesCount = pagesCount;
+    this.author = author;
+  }
 }
 
-class NovelBook extends Book {
-  const state = 100;
-  const type = "novel";
-    constructor(name, releaseDate, pagesCount, author) {
-      this.name = name;
-      this.releaseDate = releaseDate;
-      this.pagesCount = pagesCount;
-    }
+class NovelBook extends Book {  
+  constructor(author, name, releaseDate, pagesCount) {
+    super();
+    this.state = 100;
+    this.type = "novel";
+    this.name = name;
+    this.releaseDate = releaseDate;
+    this.pagesCount = pagesCount;
+    this.author = author;
+  }
 }
 
 class FantasticBook extends Book {
-  const state = 100;
-  const type = "fantastic";
-    constructor(name, releaseDate, pagesCount, author) {
-      this.name = name;
-      this.releaseDate = releaseDate;
-      this.pagesCount = pagesCount;
-    }
+  constructor(author, name, releaseDate, pagesCount) {
+    super();
+    this.state = 100;
+    this.type = "fantastic";
+    this.name = name;
+    this.releaseDate = releaseDate;
+    this.pagesCount = pagesCount;
+    this.author = author;
+  }
 }
 
 class DetectiveBook extends Book {
-  const state = 100;
-  const type = "detective";
-    constructor(name, releaseDate, pagesCount, author) {
-      this.name = name;
-      this.releaseDate = releaseDate;
-      this.pagesCount = pagesCount;
-    }
+  constructor(author, name, releaseDate, pagesCount) {
+    super();
+    this.state = 100;
+    this.type = "detective";
+    this.name = name;
+    this.releaseDate = releaseDate;
+    this.pagesCount = pagesCount;
+  }
 }
 
 //ЗАДАЧА 2:
