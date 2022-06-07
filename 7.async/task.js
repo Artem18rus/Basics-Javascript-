@@ -25,7 +25,7 @@ class AlarmClock {
       this.alarmCollection.splice(validDel, 1);
     }
     let afterAlarmColl = this.alarmCollection.length;
-      return beforeAlarmColl == afterAlarmColl;
+      return beforeAlarmColl !== afterAlarmColl;
   }
 
   getCurrentFormattedTime() {
