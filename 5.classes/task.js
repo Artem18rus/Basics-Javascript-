@@ -74,10 +74,9 @@ class Library {
   }
 
   addBook(book){
-    if(this.state < 30) {
-      this.books = this.books;
-    } 
-    this.books.push(book);      
+    if(this.state > 30) {
+      this.books.push(book);
+    }
   }
 
   findBookBy(type, value) {
